@@ -1,19 +1,64 @@
-.button {
-  background: $blue;
+//Big Button
+.big-button {
+  background: $purple;
   border: none;
+  border-bottom: .6rem solid darken($purple, 10%);
   color: white;
-  display: inline-block;
-  font-size: $font-size-large;
-  font-weight: 300;
-  line-height: 1;
-  padding: $s-size;
-  text-decoration: none;
+  font-weight: bold;
+  font-size: $l-size;
+  margin-bottom: $s-size;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+.big-button-2 {
+  background: $purple;
+  border: none;
+  border-bottom: .3rem solid darken($purple, 10%);
+  color: white;
+  font-weight: bold;
+  font-size: $l-size;
+  margin-bottom: $m-size;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+.big-button:disabled {
+  opacity: .5;
+}
+
+//Button
+.button {
+  background: $purple;
+  border: none;
+  border-bottom: .3rem solid darken($purple, 10%);
+  color: white;
+  font-weight: 500;
+  padding: $m-size;
 }
 
 .button--link {
   background: none;
+  border: none;
+  color: $off-white;
+  padding: 0;
 }
 
-.button--secondary {
-  background: #888;
+.button--link-rwd {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: $off-white;
+  padding: 0;
+}
+
+
+
+@media (min-width: $desktop-breakpoint) { //larger than will apply
+  .big-button {
+    margin-bottom: $xl-size; // the original setting for webpage
+  }
+  .button--link-rwd {
+    font-size: 1.6rem;
+  }
 }
